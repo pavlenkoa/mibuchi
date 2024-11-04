@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+        :root {
+            --bg-color: #13111C;
+            --card-bg: #1D1B26;
+            --primary: #FF6B9D;
+            --secondary: #8B5CF6;
+            --text: #FFFFFF;
+            --text-secondary: #A9A6B6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            min-height: 100vh;
+            background: linear-gradient(135deg, #13111C 0%, #1D1B26 100%);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .glass-card {
+            background: rgba(29, 27, 38, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-text {
+            color: var(--text);
+        }
+
+        .price-amount {
+            font-weight: 500;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .profile-pic-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            padding: 3px;
+            background: var(--card-bg);
+        }
+
+        .profile-status {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 3px solid var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 600;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .profile-bio {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .button {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .donate-button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2);
+        }
+
+        .donate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
+        }
+
+        .telegram-button {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+        }
+
+        .telegram-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .button-subtitle {
+            color: var(--text-secondary);
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="price-text">Замовити пісню</span>
+                    <span class="price-amount">50₴</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-text">Замовити героя в ранг<br>(окрім асасінів)</span>
+                    <span class="price-amount">150₴</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-text">Замовити асасіна в ранг</span>
+                    <span class="price-amount">300₴</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-text">Гра на Фані</span>
+                    <span class="price-amount">500₴</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-text">Гра в лісі</span>
+                    <span class="price-amount">200₴</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-text">Кастомка</span>
+                    <span class="price-amount">150₴</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-pic-container floating">
+                <img src="/api/placeholder/120/120" alt="Profile" class="profile-pic">
+                <div class="profile-status">🎮</div>
+            </div>
+            <div class="profile-name">Mibuchi</div>
+            <div class="profile-bio">(роумер, рулінер, мама двох пухнастих ангеликів)</div>
+        </div>
+
+        <a href="https://donatello.to/mibuchi" class="button donate-button">
+            <span>🎯</span> Донат на екран
+        </a>
+        <div class="button-subtitle">тут замовити чи просто підтримати</div>
+
+        <a href="https://t.me/your_username" class="button telegram-button">
+            <span>✈️</span> Telegram
+        </a>
+        <div class="button-subtitle">анонс стрімів (а може бути ще щось тут є чи буде)</div>
+    </div>
+</body>
+</html>
